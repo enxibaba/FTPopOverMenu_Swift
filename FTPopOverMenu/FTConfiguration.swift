@@ -22,6 +22,11 @@ public class FTConfiguration: NSObject {
     public var globalShadow = false
     public var shadowAlpha: CGFloat = 0.6
     public var localShadow = false
+		
+		// menuArrow
+		public var menuArrowWidth = FT.DefaultMenuArrowWidth
+		public var menuArrowHeight = FT.DefaultMenuArrowHeight
+		public var menuArrowMargin = FT.DefaultMenuArrowMargin
     
     // cell configs
     public var textColor: UIColor = UIColor.white
