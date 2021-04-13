@@ -14,24 +14,24 @@ public protocol Imageable {
 
 extension String: Imageable {
     public func getImage() -> UIImage? {
-        return UIImage(named: self)
+        UIImage(named: self)
     }
 }
 
 extension UIImage: Imageable {
     public func getImage() -> UIImage? {
-        return self
+        self
     }
 }
 
 public protocol FTMenuObject {
-    
+
 }
 
 extension String: FTMenuObject {
-    
+
 }
 
 extension FTPopOverMenuModel: FTMenuObject {
-    
+
 }

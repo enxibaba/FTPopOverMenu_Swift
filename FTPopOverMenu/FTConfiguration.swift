@@ -9,6 +9,7 @@
 import UIKit
 
 public class FTConfiguration: NSObject {
+	public var menuMargin = FT.DefaultMargin
     public var menuRowHeight = FT.DefaultMenuRowHeight
     public var menuWidth = FT.DefaultMenuWidth
     public var borderColor = FT.DefaultTintColor
