@@ -9,7 +9,6 @@
 import UIKit
 
 public class FTConfiguration: NSObject {
-
     public var menuRowHeight = FT.DefaultMenuRowHeight
     public var menuWidth = FT.DefaultMenuWidth
     public var borderColor = FT.DefaultTintColor
@@ -22,21 +21,19 @@ public class FTConfiguration: NSObject {
     public var globalShadow = false
     public var shadowAlpha: CGFloat = 0.6
     public var localShadow = false
-		
-		// menuArrow
-		public var menuArrowWidth = FT.DefaultMenuArrowWidth
-		public var menuArrowHeight = FT.DefaultMenuArrowHeight
-		public var menuArrowMargin = FT.DefaultMenuArrowMargin
-    
+
+    // menuArrow
+    public var menuArrowWidth = FT.DefaultMenuArrowWidth
+    public var menuArrowHeight = FT.DefaultMenuArrowHeight
+    public var menuArrowMargin = FT.DefaultMenuArrowMargin
+
     // cell configs
     public var textColor: UIColor = UIColor.white
     public var textFont: UIFont = UIFont.systemFont(ofSize: 14)
     public var textAlignment: NSTextAlignment = NSTextAlignment.left
     public var ignoreImageOriginalColor = false
     public var menuIconSize: CGFloat = FT.DefaultMenuIconSize
-    
+
     public var selectedTextColor: UIColor = UIColor.darkText
     public var selectedCellBackgroundColor: UIColor = UIColor.red
-    
 }
-

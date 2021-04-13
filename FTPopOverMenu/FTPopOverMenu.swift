@@ -385,15 +385,15 @@ fileprivate class FTPopOverMenuView: UIControl {
         backgroundLayer.fillColor = configuration.backgoundTintColor.cgColor
         backgroundLayer.strokeColor = configuration.borderColor.cgColor
         backgroundLayer.lineWidth = configuration.borderWidth
+		
         if configuration.localShadow {
-            backgroundLayer.shadowColor = UIColor.black.cgColor
-            backgroundLayer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-            backgroundLayer.shadowRadius = 24.0
-            backgroundLayer.shadowOpacity = 0.9
+            backgroundLayer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.12).cgColor
+            backgroundLayer.shadowOffset = CGSize(width: 0, height: 0)
+            backgroundLayer.shadowRadius = 8
+            backgroundLayer.shadowOpacity = 1
             backgroundLayer.masksToBounds = false
             backgroundLayer.shouldRasterize = true
             backgroundLayer.rasterizationScale = UIScreen.main.scale
-            
         }
         self.layer.insertSublayer(backgroundLayer, at: 0)
         //        backgroundLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(rotationAngle: CGFloat(M_PI))) //CATransform3DMakeRotation(CGFloat(M_PI), 1, 1, 0)
@@ -438,11 +438,7 @@ fileprivate class FTPopOverMenuView: UIControl {
                         endAngle: .pi / 2 * 3,
                         clockwise: true)
             path.close()
-            //            path = UIBezierPath(roundedRect: CGRect.init(x: 0, y: FTDefaultMenuArrowHeight, width: self.bounds.size.width, height: self.bounds.height - FTDefaultMenuArrowHeight), cornerRadius: configuration.cornerRadius)
-            //            path.move(to: CGPoint(x: arrowPoint.x - FTDefaultMenuArrowWidth, y: FTDefaultMenuArrowHeight))
-            //            path.addLine(to: CGPoint(x: arrowPoint.x, y: 0))
-            //            path.addLine(to: CGPoint(x: arrowPoint.x + FTDefaultMenuArrowWidth, y: FTDefaultMenuArrowHeight))
-            //            path.close()
+            
         }else{
             path.move(to: CGPoint(x: arrowPoint.x - configuration.menuArrowWidth, y: viewHeight - configuration.menuArrowHeight))
             path.addLine(to: CGPoint(x: arrowPoint.x, y: viewHeight))
@@ -472,11 +468,6 @@ fileprivate class FTPopOverMenuView: UIControl {
                         endAngle: .pi / 2,
                         clockwise: false)
             path.close()
-            //            path = UIBezierPath(roundedRect: CGRect.init(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.height - FTDefaultMenuArrowHeight), cornerRadius: configuration.cornerRadius)
-            //            path.move(to: CGPoint(x: arrowPoint.x - FTDefaultMenuArrowWidth, y: self.bounds.size.height - FTDefaultMenuArrowHeight))
-            //            path.addLine(to: CGPoint(x: arrowPoint.x, y: self.bounds.size.height))
-            //            path.addLine(to: CGPoint(x: arrowPoint.x + FTDefaultMenuArrowWidth, y: self.bounds.size.height - FTDefaultMenuArrowHeight))
-            //            path.close()
         }
         return path
     }
